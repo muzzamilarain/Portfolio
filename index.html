@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muzzamil Arain | Cybersecurity Professional</title>
     
-    <!-- Tailwind CSS Engine -->
+    <!-- Tailwind CSS (via CDN for GitHub Pages) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- FontAwesome for Icons -->
@@ -480,23 +480,18 @@
             </div>
 
             <!-- Contact Form -->
-            <form id="contact-form" method="POST" class="max-w-md mx-auto text-left fade-in-section space-y-4">
-                <!-- FormSubmit Configuration to prevent spam -->
-                <input type="hidden" name="_subject" value="New Transmission from Portfolio!">
-                <input type="hidden" name="_template" value="box">
-                <input type="hidden" name="_captcha" value="true">
-                
+            <form id="contact-form" class="max-w-md mx-auto text-left fade-in-section space-y-4">
                 <div>
                     <label for="name" class="block text-sm font-mono text-gray-400 mb-1">Name</label>
-                    <input type="text" id="name" name="name" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
+                    <input type="text" id="name" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-mono text-gray-400 mb-1">Email</label>
-                    <input type="email" id="email" name="email" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
+                    <input type="email" id="email" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
                 </div>
                 <div>
                     <label for="message" class="block text-sm font-mono text-gray-400 mb-1">Message</label>
-                    <textarea id="message" name="message" rows="4" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+                    <textarea id="message" rows="4" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
                 </div>
                 <button type="submit" class="w-full py-3 bg-transparent border border-brand-primary text-brand-primary font-bold rounded hover:bg-brand-primary/10 transition-colors">
                     Send Transmission
@@ -509,7 +504,7 @@
     <footer class="bg-brand-darker py-6 text-center border-t border-brand-surface">
         <p class="text-gray-500 text-sm font-mono">
             Built by Muzzamil Arain <br>
-            <span class="text-xs mt-2 block opacity-50">&copy; 2026 All Rights Reserved.</span>
+            <span class="text-xs mt-2 block opacity-50">&copy; 2024 All Rights Reserved.</span>
         </p>
     </footer>
 
@@ -603,13 +598,30 @@
             });
         });
 
-        // --- Contact Form Logic (Obfuscated Email) ---
-        // Splitting the email prevents spam bots from scraping it from your source code
+        // --- Contact Form Logic (Client-Side Mailto Routing) ---
+        // This method avoids third-party server errors entirely!
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
-            const user = "alimuzzammil180";
-            const domain = "gmail.com";
-            contactForm.action = `https://formsubmit.co/${user}@${domain}`;
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get user input
+                const name = document.getElementById('name').value;
+                const senderEmail = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Obfuscated email reconstruction
+                const user = "alimuzzammil180";
+                const domain = "gmail.com";
+                const emailTo = `${user}@${domain}`;
+
+                // Format the email content
+                const subject = encodeURIComponent(`New Transmission from Portfolio: ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${senderEmail}\n\nMessage:\n${message}`);
+
+                // Open the user's default email client
+                window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+            });
         }
     </script>
 </body>
