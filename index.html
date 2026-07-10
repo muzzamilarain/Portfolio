@@ -36,6 +36,7 @@
         }
     </script>
 
+    <!-- Custom CSS Styles -->
     <style>
         body {
             font-family: 'Fira Code', monospace;
@@ -129,11 +130,6 @@
 </head>
 <body class="antialiased selection:bg-brand-primary selection:text-white">
 
-    <!-- Diagnostic Banner (Only shows if Tailwind is blocked) -->
-    <div id="tailwind-diagnostic" style="display: none; background-color: #ef4444; color: white; padding: 1rem; text-align: center; font-family: sans-serif; position: relative; z-index: 9999;">
-        <strong>⚠️ WARNING:</strong> Your browser (or a browser extension like NoScript/Privacy Badger) is blocking the Tailwind CSS design engine. Please disable your shields/ad-blocker for this site and refresh.
-    </div>
-
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-brand-darker/80 border-b border-brand-surface" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,6 +147,7 @@
                     <a href="#projects" class="text-gray-300 hover:text-brand-primary transition-colors text-sm font-medium">~/projects</a>
                     <a href="#certifications" class="text-gray-300 hover:text-brand-primary transition-colors text-sm font-medium">~/certs</a>
                     <a href="#articles" class="text-gray-300 hover:text-brand-primary transition-colors text-sm font-medium">~/articles</a>
+                    <a href="#playlists" class="text-gray-300 hover:text-brand-primary transition-colors text-sm font-medium">~/playlists</a>
                     <a href="#contact" class="text-gray-300 hover:text-brand-primary transition-colors text-sm font-medium">~/contact</a>
                 </div>
 
@@ -170,6 +167,7 @@
                 <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-primary hover:bg-brand-surface">~/projects</a>
                 <a href="#certifications" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-primary hover:bg-brand-surface">~/certs</a>
                 <a href="#articles" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-primary hover:bg-brand-surface">~/articles</a>
+                <a href="#playlists" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-primary hover:bg-brand-surface">~/playlists</a>
                 <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-primary hover:bg-brand-surface">~/contact</a>
             </div>
         </div>
@@ -189,7 +187,7 @@
                 I am a <span id="typed-text" class="text-white"></span><span class="typing-cursor"></span>
             </div>
             <p class="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Passionate cybersecurity professional specializing in vulnerability research, penetration testing, and security education. Dedicated to uncovering critical system flaws and sharing technical insights through deep-dive articles and content creation.
+                I love to find bugs in systems, I write articles and do content creation of cyber security topics.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#contact" class="px-8 py-3 bg-brand-primary text-brand-darker font-bold rounded hover:bg-brand-glow transition-all shadow-[0_0_15px_rgba(16,185,129,0.4)] inline-block">
@@ -206,14 +204,14 @@
     <section id="about" class="py-24 bg-brand-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="fade-in-section">
-                <h2 class="text-3xl font-bold text-white mb-2">~/about-me</h2>
+                <h2 class="text-3xl font-bold text-white mb-2"><span class="text-brand-primary"></span> ~/about-me</h2>
                 <div class="w-20 h-1 bg-brand-primary mb-12"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in-section">
                 <div>
                     <p class="text-gray-400 leading-relaxed mb-6">
-                        Hello! I'm Muzzamil. My journey into cybersecurity began with a profound fascination for digital systems and their underlying mechanics. While my formal education in a BS Cyber Security program began in 2022, my dedication to the field has been a longstanding passion. I am driven by the challenge of mastering offensive security concepts, digital forensics, and secure architecture to stay ahead of modern threats.
+                        Hello! I'm Muzzamil. I started studying BS Cyber Security in 2022, but before that, I have always admired and loved the works of Cyber Security as I saw that work in movies and it looked cool. My journey is driven by a passion to master offensive security concepts, digital forensics, and secure architecture.
                     </p>
                     <p class="text-gray-400 mb-4">Here are a few skills, technologies & tools I've been working with recently:</p>
                     <ul class="grid grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-gray-300 font-mono">
@@ -257,7 +255,7 @@
     <section id="projects" class="py-24 bg-brand-darker">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="fade-in-section">
-                <h2 class="text-3xl font-bold text-white mb-2">~/projects</h2>
+                <h2 class="text-3xl font-bold text-white mb-2"><span class="text-brand-primary"></span> ~/projects</h2>
                 <div class="w-20 h-1 bg-brand-primary mb-12"></div>
             </div>
 
@@ -345,7 +343,7 @@
     <section id="certifications" class="py-24 bg-brand-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="fade-in-section">
-                <h2 class="text-3xl font-bold text-white mb-2">~/certifications</h2>
+                <h2 class="text-3xl font-bold text-white mb-2"><span class="text-brand-primary"></span> ~/certifications</h2>
                 <div class="w-20 h-1 bg-brand-primary mb-12"></div>
             </div>
 
@@ -379,7 +377,7 @@
     <section id="articles" class="py-24 bg-brand-darker">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="fade-in-section">
-                <h2 class="text-3xl font-bold text-white mb-2">~/articles</h2>
+                <h2 class="text-3xl font-bold text-white mb-2"><span class="text-brand-primary"></span> ~/articles</h2>
                 <div class="w-20 h-1 bg-brand-primary mb-12"></div>
             </div>
 
@@ -415,8 +413,56 @@
         </div>
     </section>
 
+    <!-- Playlists Section -->
+    <section id="playlists" class="py-24 bg-brand-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold text-white mb-2"><span class="text-brand-primary"></span> ~/playlists</h2>
+                <div class="w-20 h-1 bg-brand-primary mb-12"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Playlist 1 -->
+                <a href="https://youtube.com/playlist?list=PLT-7O1RlLPH4dMglszWfRtM2DGvtbU3p6&si=qULT2yg5gIprcuIk" target="_blank" class="block group fade-in-section">
+                    <div class="bg-brand-surface rounded-lg overflow-hidden border border-gray-800 group-hover:border-[#ff0000] transition-all duration-300 h-full flex flex-col p-6">
+                        <i class="fa-brands fa-youtube text-4xl text-[#ff0000] mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors">OSINT</h3>
+                        <p class="text-gray-400 text-sm flex-grow mb-4">Open Source Intelligence tools, techniques, and methodologies.</p>
+                        <span class="text-sm font-bold text-brand-primary inline-flex items-center">
+                            Watch Playlist <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Playlist 2 -->
+                <a href="https://youtube.com/playlist?list=PLT-7O1RlLPH4cAKeKEP01693TRRed9YHX&si=rjMUMEHoYnQEa6D_" target="_blank" class="block group fade-in-section">
+                    <div class="bg-brand-surface rounded-lg overflow-hidden border border-gray-800 group-hover:border-[#ff0000] transition-all duration-300 h-full flex flex-col p-6">
+                        <i class="fa-brands fa-youtube text-4xl text-[#ff0000] mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors">Linux Administration</h3>
+                        <p class="text-gray-400 text-sm flex-grow mb-4">Mastering Linux commands, system administration, and permissions.</p>
+                        <span class="text-sm font-bold text-brand-primary inline-flex items-center">
+                            Watch Playlist <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Playlist 3 -->
+                <a href="https://youtube.com/playlist?list=PLT-7O1RlLPH6EWBOoUUCn0d3VBFnXESxt&si=dhH4l9o_Dk4vOuAx" target="_blank" class="block group fade-in-section">
+                    <div class="bg-brand-surface rounded-lg overflow-hidden border border-gray-800 group-hover:border-[#ff0000] transition-all duration-300 h-full flex flex-col p-6">
+                        <i class="fa-brands fa-youtube text-4xl text-[#ff0000] mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors">Cyber Security</h3>
+                        <p class="text-gray-400 text-sm flex-grow mb-4">Deep dives into offensive security, vulnerabilities, and hacking concepts.</p>
+                        <span class="text-sm font-bold text-brand-primary inline-flex items-center">
+                            Watch Playlist <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-brand-dark">
+    <section id="contact" class="py-24 bg-brand-darker">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="fade-in-section">
                 <p class="text-brand-primary font-mono mb-2">What's Next?</p>
@@ -434,18 +480,23 @@
             </div>
 
             <!-- Contact Form -->
-            <form class="max-w-md mx-auto text-left fade-in-section space-y-4">
+            <form id="contact-form" method="POST" class="max-w-md mx-auto text-left fade-in-section space-y-4">
+                <!-- FormSubmit Configuration to prevent spam -->
+                <input type="hidden" name="_subject" value="New Transmission from Portfolio!">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_captcha" value="true">
+                
                 <div>
                     <label for="name" class="block text-sm font-mono text-gray-400 mb-1">Name</label>
-                    <input type="text" id="name" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
+                    <input type="text" id="name" name="name" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-mono text-gray-400 mb-1">Email</label>
-                    <input type="email" id="email" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
+                    <input type="email" id="email" name="email" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors">
                 </div>
                 <div>
                     <label for="message" class="block text-sm font-mono text-gray-400 mb-1">Message</label>
-                    <textarea id="message" rows="4" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+                    <textarea id="message" name="message" rows="4" required class="w-full bg-brand-surface border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
                 </div>
                 <button type="submit" class="w-full py-3 bg-transparent border border-brand-primary text-brand-primary font-bold rounded hover:bg-brand-primary/10 transition-colors">
                     Send Transmission
@@ -464,13 +515,6 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // Check if Tailwind loaded properly
-        window.addEventListener('load', () => {
-            if (typeof tailwind === 'undefined') {
-                document.getElementById('tailwind-diagnostic').style.display = 'block';
-            }
-        });
-
         // --- typing.js logic ---
         const words = ["Penetration Tester.", "Researcher.", "Content Creator."];
         let i = 0;
@@ -552,11 +596,21 @@
             menu.classList.toggle('hidden');
         });
 
+        // Close mobile menu when a link is clicked
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
         });
+
+        // --- Contact Form Logic (Obfuscated Email) ---
+        // Splitting the email prevents spam bots from scraping it from your source code
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            const user = "alimuzzammil180";
+            const domain = "gmail.com";
+            contactForm.action = `https://formsubmit.co/${user}@${domain}`;
+        }
     </script>
 </body>
 </html>
